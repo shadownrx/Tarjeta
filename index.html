@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Embarque</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Tarjeta de Embarque</h2>
+        <form id="boardingForm">
+            <label for="nombre"><i class="fas fa-user"></i> Nombre Completo</label>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre" required><br>
+            
+            <label for="origen"><i class="fas fa-plane-departure"></i> Aeropuerto de Salida (ICAO)</label>
+            <select id="origen">
+                <option value="KLAX">Los Ángeles (KLAX)</option>
+                <option value="KJFK">New York (KJFK)</option>
+                <option value="LEMD">Madrid (LEMD)</option>
+                <option value="KSFO">San Francisco (KSFO)</option>
+                <option value="SKBO">El Dorado (SKBO)</option>
+            </select><br>
+
+            <label for="destino"><i class="fas fa-plane-arrival"></i> Aeropuerto de Llegada (ICAO)</label>
+            <select id="destino">
+                <option value="KJFK">New York (KJFK)</option>
+                <option value="LEMD">Madrid (LEMD)</option>
+                <option value="KSFO">San Francisco (KSFO)</option>
+                <option value="KLAX">Los Ángeles (KLAX)</option>
+                <option value="SKBO">El Dorado (SKBO)</option>
+            </select><br>
+
+            <button type="button" id="generar-btn" onclick="generarTarjeta()">
+                <i class="fas fa-ticket-alt"></i> Generar Tarjeta
+            </button>
+        </form>
+
+        <!-- Tarjeta de Embarque -->
+        <div id="tarjetaAbordo" class="tarjeta ticket">
+            <h3>Tarjeta de Embarque</h3>
+            <div class="ticket-header">
+                <div class="ticket-section">
+                    <p><i class="fas fa-user"></i> <strong>Nombre:</strong></p>
+                    <span id="nombreAbordo"></span>
+                </div>
+                <div class="ticket-section">
+                    <p><i class="fas fa-plane"></i> <strong>Vuelo:</strong></p>
+                    <span id="vueloAbordo"></span>
+                </div>
+            </div>
+            
+            <div class="ticket-body">
+                <div class="ticket-section">
+                    <p><i class="fas fa-plane-departure"></i> <strong>Salida (ICAO):</strong></p>
+                    <span id="origenAbordo"></span>
+                </div>
+                <div class="ticket-section">
+                    <p><i class="fas fa-plane-arrival"></i> <strong>Destino (ICAO):</strong></p>
+                    <span id="destinoAbordo"></span>
+                </div>
+                <div class="ticket-section">
+                    <p><i class="fas fa-chair"></i> <strong>Asiento:</strong></p>
+                    <span id="asientoAbordo"></span>
+                </div>
+                <div class="ticket-section">
+                    <p><i class="fas fa-clock"></i> <strong>Hora de Embarque:</strong></p>
+                    <span id="horaEmbarqueAbordo"></span>
+                </div>
+                <div class="ticket-section">
+                    <p><i class="fas fa-suitcase"></i> <strong>Maleta Sugerida:</strong></p>
+                    <span id="maletaSugerida"></span>
+                </div>
+                <div class="ticket-section">
+                    <p><i class="fas fa-plane"></i> <strong>Avión (ICAO):</strong></p>
+                    <span id="avionICAOAbordo"></span>
+                </div>
+                <div class="ticket-section">
+                    <p><i class="fas fa-hourglass-half"></i> <strong>Duración del Vuelo:</strong></p>
+                    <span id="duracionVueloAbordo"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón de Modo Oscuro -->
+        <button id="modo-oscuro-btn" onclick="toggleModoOscuro()">
+            <i class="fas fa-moon"></i> Modo Oscuro
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

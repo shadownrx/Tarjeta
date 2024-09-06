@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.ticket {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e3e3e3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ticket-section {
+    margin-bottom: 10px;
+}
+
+#modo-oscuro-btn {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+#modo-oscuro-btn i {
+    margin-right: 8px;
+}
+
+/* Modo oscuro */
+body.modo-oscuro {
+    background-color: #181818;
+    color: #f1f1f1;
+}
+
+body.modo-oscuro .container {
+    background-color: #282828;
+}
+
+body.modo-oscuro button {
+    background-color: #444;
+}
+
+body.modo-oscuro .ticket {
+    background-color: #333;
+}
+
+body.modo-oscuro #modo-oscuro-btn {
+    background-color: #999;
+    color: #fff;
+}
+
+body.modo-oscuro #modo-oscuro-btn:hover {
+    background-color: #777;
+}
